@@ -17,8 +17,6 @@ function parseLicense (licenseString) {
         return "Error";
     }
 
-
-
 }
 
 module.exports = parseLicense;

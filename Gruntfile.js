@@ -3,24 +3,18 @@ module.exports = function(grunt) {
     // load all grunt tasks matching the `grunt-*` pattern
     require('load-grunt-tasks')(grunt);
 
+    grunt.loadNpmTasks('grunt-contrib-license-report');
+
     // Default task(s).
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('default', ['license-report']);
 
 
     // Plugin configuration(s).
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        jshint: {
-            all: ['Gruntfile.js', 'lib/**/*.js']
-        },
-        mochaTest: {
-            test: {
-                options: {
-                    bail: true,
-                    reporter: 'dot'
-                },
-                src: ['test/**/*.spec.js']
-            }
+
+        "license-report": {
+            target: './licenses.html'
         }
     });
 };
