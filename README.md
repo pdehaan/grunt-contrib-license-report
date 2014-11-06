@@ -8,6 +8,3 @@ Discovers all licenses used in one package and generates a small HTML report
 ## Usage
 
     npm install grunt-contrib-license-report --save-dev
-
-Example:
-
