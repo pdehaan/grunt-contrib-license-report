@@ -28,23 +28,23 @@ module.exports = function(grunt) {
         'text-align: left;\n' +
         '}</style>\n</head>\n<body>\n<h1>License report for ' + project.name + ' v' + project.version + '</h1>\n<table border="1">\n<tr>\n<th>Project</th><th>License</th><th>Repository</th>\n</tr>';
 
-      var jsonObj = Object.getOwnPropertyNames(json);
+      var packageNames = Object.getOwnPropertyNames(json);
 
-      jsonObj.forEach(function (value) {
+      packageNames.forEach(function (packageName) {
 
-        output += '\n<tr>\n<td>' + value + '</td>';
+        output += '\n<tr>\n<td>' + packageName + '</td>';
 
 
 
-        output += '\n<td>' + sanitize(json[value].licenses) + '</td>';
-        output += '\n<td><a href="' + json[value].repository + '" target="_blank">' + json[value].repository + '</a></td>\n</tr>';
+        output += '\n<td>' + sanitize(json[packageName].licenses, packageName, grunt) + '</td>';
+        output += '\n<td><a href="' + json[packageName].repository + '" target="_blank">' + json[packageName].repository + '</a></td>\n</tr>';
       });
 
       output += '\n</table></body></html>';
 
-      // Write the destination file
+
       grunt.file.write('./licenses.html', output);
-      // Print a success message
+
       grunt.log.writeln('File licenses.html created.');
 
       done();
