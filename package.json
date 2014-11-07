@@ -1,36 +1,36 @@
 {
-  "name": "grunt-contrib-license-report",
-  "version": "0.0.2",
-  "homepage": "https://github.com/Fkscorpion/grunt-contrib-license-report",
-  "author": "https://github.com/Fkscorpion/grunt-contrib-license-report/graphs/contributors",
-  "description": "Discovers all licenses used in one package and generates a small HTML report",
-  "keywords": [
-      "license",
-      "report",
-      "finder"
-  ],
-  "dependencies": {
-      "license-checker": "0.0.10"
-  },
-  "devDependencies": {
-      "grunt-contrib-license-report": "0.0.2",
-      "grunt": "0.4.5",
-      "grunt-contrib-jshint": "0.10.0",
-      "grunt-mocha-test": "0.10.2",
-      "load-grunt-tasks": "0.6.0",
-      "should": "4.0.4",
-      "mocha": "1.21.4"
-  },
-  "repository": {
-      "type": "git",
-      "url": "git@github.com:Fkscorpion/grunt-contrib-license-report.git"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/Fkscorpion/grunt-contrib-license-report/blob/master/LICENSE"
-    }
-  ],
-  "main": "./tasks/license-report",
-  "bugs": "https://github.com/Fkscorpion/grunt-contrib-license-report/issues"
+    "name": "grunt-contrib-license-report",
+    "version": "0.0.3",
+    "homepage": "https://github.com/Fkscorpion/grunt-contrib-license-report",
+    "author": "https://github.com/Fkscorpion/grunt-contrib-license-report/graphs/contributors",
+    "description": "Discovers all licenses used in one package and generates a small HTML report",
+    "keywords": [
+        "license",
+        "report",
+        "finder"
+    ],
+    "dependencies": {
+        "license-checker": "0.0.10"
+    },
+    "devDependencies": {
+        "grunt-contrib-license-report": "0.0.3",
+        "grunt": "0.4.5",
+        "grunt-contrib-jshint": "0.10.0",
+        "grunt-mocha-test": "0.10.2",
+        "load-grunt-tasks": "0.6.0",
+        "should": "4.0.4",
+        "mocha": "1.21.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:Fkscorpion/grunt-contrib-license-report.git"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/Fkscorpion/grunt-contrib-license-report/blob/master/LICENSE"
+        }
+    ],
+    "main": "./tasks/license-report",
+    "bugs": "https://github.com/Fkscorpion/grunt-contrib-license-report/issues"
 }

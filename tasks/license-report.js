@@ -42,7 +42,6 @@ module.exports = function(grunt) {
 
       output += '\n</table></body></html>';
 
-
       grunt.file.write(grunt.config.data['license-report'].target, output);
 
       grunt.log.writeln('File ' + grunt.config.data['license-report'].target + ' created.');
