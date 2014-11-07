@@ -1,15 +1,16 @@
 'use strict';
 
+
 module.exports = function(grunt) {
   var checker = require('license-checker'),
     sanitize = require('./lib/sanitize'),
     project = require('../package.json');
 
   grunt.registerMultiTask('license-report', 'Discovers all licenses used in one package and generates a small HTML report.', function () {
-// Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options(grunt.config.data['license-report']);
+
     var done = this.async();
 
+    // Start the license checker, which gives back a .json file, with all found licenses
     checker.init({
       start: './'
     }, function (json) {
@@ -18,7 +19,10 @@ module.exports = function(grunt) {
         '<style type="text/css">\n' +
         'html, body {\n' +
         'background-color: #FFFFFF;\n' +
-        'color: #333333\n' +
+        'color: #333333;\n' +
+        'font-family: Arial,sans-serif;\n' +
+        'font-size: 14px; \n' +
+        'line-height: 1.42857; \n' +
         'padding: 0:\n' +
         'margin: 0;\n' +
         '}\n' +
@@ -32,8 +36,6 @@ module.exports = function(grunt) {
 
         output += '\n<tr>\n<td>' + packageName + '</td>';
 
-
-
         output += '\n<td>' + sanitize(json[packageName].licenses, packageName, grunt) + '</td>';
         output += '\n<td><a href="' + json[packageName].repository + '" target="_blank">' + json[packageName].repository + '</a></td>\n</tr>';
       });
@@ -41,11 +43,11 @@ module.exports = function(grunt) {
       output += '\n</table></body></html>';
 
 
-      grunt.file.write(options.target, output);
+      grunt.file.write(grunt.config.data['license-report'].target, output);
 
-      grunt.log.writeln('File ' + options.target + ' created.');
+      grunt.log.writeln('File ' + grunt.config.data['license-report'].target + ' created.');
 
-
+      //Tell grunt, we are done with our asynchronus tasks
       done();
     });
   });
