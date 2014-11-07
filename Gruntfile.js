@@ -5,10 +5,10 @@ module.exports = function(grunt) {
 
     // load the other tasks.
     grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-contrib-license-report');
 
     // Default task(s).
-    grunt.registerTask('default', ['jshint', 'mochaTest']);
-
+    grunt.registerTask('default', ['jshint', 'mochaTest', 'license-report']);
 
     // Plugin configuration(s).
     grunt.initConfig({

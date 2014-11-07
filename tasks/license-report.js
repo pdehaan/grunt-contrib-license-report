@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = function(grunt) {
   var checker = require('license-checker'),
     sanitize = require('./lib/sanitize'),
