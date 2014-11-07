@@ -1,30 +1,29 @@
 {
   "name": "grunt-contrib-license-report",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/Fkscorpion/grunt-contrib-license-report",
   "author": "https://github.com/Fkscorpion/grunt-contrib-license-report/graphs/contributors",
   "description": "Discovers all licenses used in one package and generates a small HTML report",
   "keywords": [
-    "license",
-    "report",
-    "finder"
+      "license",
+      "report",
+      "finder"
   ],
   "dependencies": {
-    "license-checker": "0.0.10"
+      "license-checker": "0.0.10"
   },
   "devDependencies": {
-    "grunt": "0.4.5",
-    "grunt-contrib-clean": "0.5.0",
-    "grunt-contrib-jshint": "0.10.0",
-    "grunt-mocha-test": "0.10.2",
-    "load-grunt-tasks": "0.6.0",
-    "chai": "1.9.1",
-    "mocha": "1.21.4"
+      "grunt": "0.4.5",
+      "grunt-contrib-jshint": "0.10.0",
+      "grunt-mocha-test": "0.10.2",
+      "load-grunt-tasks": "0.6.0",
+      "should": "4.0.4",
+      "mocha": "1.21.4"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:Fkscorpion/grunt-contrib-license-report.git"
+      "type": "git",
+      "url": "git@github.com:Fkscorpion/grunt-contrib-license-report.git"
   },
-  "main": "./lib/socket.lib.cluster",
+  "main": "./tasks/license-report",
   "bugs": "https://github.com/Fkscorpion/grunt-contrib-license-report/issues"
 }

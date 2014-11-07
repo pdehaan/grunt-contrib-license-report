@@ -3,8 +3,6 @@ function parseLicense (licenseString, packageName, grunt) {
 
     if(licenseString == 'UNKNOWN')
     {
-        // TODO :
-        // Implement warninge
         grunt.log.warn('UNKNOWN LICENSE for ' + packageName);
         return 'UNKNOWN';
     }

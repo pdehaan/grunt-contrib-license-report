@@ -4,12 +4,11 @@
 module.exports = function(grunt) {
   var checker = require('license-checker'),
     sanitize = require('./lib/sanitize'),
-    fs = require('fs'),
     project = require('../package.json');
 
   grunt.registerMultiTask('license-report', 'Discovers all licenses used in one package and generates a small HTML report.', function () {
 // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({});
+    var options = this.options(grunt.config.data['license-report']);
     var done = this.async();
 
     checker.init({
@@ -43,9 +42,10 @@ module.exports = function(grunt) {
       output += '\n</table></body></html>';
 
 
-      grunt.file.write('./licenses.html', output);
+      grunt.file.write(options.target, output);
 
-      grunt.log.writeln('File licenses.html created.');
+      grunt.log.writeln('File ' + options.target + ' created.');
+
 
       done();
     });
